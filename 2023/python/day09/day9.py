@@ -26,7 +26,7 @@ def part_one(lines: List[str]) -> int:
                     break
             else:
                 break
-            
+
             seq_ends.append(seq[-1])
 
             new_seq = []
