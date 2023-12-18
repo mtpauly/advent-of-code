@@ -1,5 +1,4 @@
 import argparse
-from typing import List
 
 
 def main():
@@ -14,11 +13,11 @@ def main():
     print(f"part 2 solution: {part_two(lines)}")
 
 
-def part_one(lines: List[str]) -> int:
+def part_one(lines: list[str]) -> int:
     return 0
 
 
-def part_two(lines: List[str]) -> int:
+def part_two(lines: list[str]) -> int:
     return 0
 
 
