@@ -125,6 +125,8 @@ def part_two(lines: list[str]) -> int:
         point_heat, point = heapq.heappop(heap)
 
         x, y, _, _, steps_taken = point
+        if x == n - 1 and y == m - 1:
+            return point_heat + heat[(x, y)]
         if x < 0 or x >= n:
             continue
         if y < 0 or y >= m:
@@ -138,14 +140,7 @@ def part_two(lines: list[str]) -> int:
         for point_adj in get_adj_ultra(*point):
             heapq.heappush(heap, (point_heat, point_adj))
 
-    end_heat = []
-    for dx, dy in DIRECTIONS:
-        for steps_taken in range(11):
-            point = (n - 1, m - 1, dx, dy, steps_taken)
-            if steps_taken >= 4:
-                end_heat.append(min_heat[point])
-
-    return min(end_heat)
+    raise RuntimeError("did not traverse to bottom corner")
 
 
 if __name__ == "__main__":
