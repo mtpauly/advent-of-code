@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+We are given the equations:
+\begin{align}
+    x_1 + t_1 \cdot dx_1 &= x_2 + t_2 \cdot dx_2 \\
+    y_1 + t_1 \cdot dy_1 &= y_2 + t_2 \cdot dy_2
+\end{align}
+
+To solve for \( t_1 \) and \( t_2 \), we rearrange each equation to isolate \( t_1 \) and \( t_2 \):
+
+From the first equation:
+\begin{align}
+    t_1 &= \frac{x_2 - x_1 + t_2 \cdot dx_2}{dx_1}
+\end{align}
+
+From the second equation:
+\begin{align}
+    t_1 &= \frac{y_2 - y_1 + t_2 \cdot dy_2}{dy_1}
+\end{align}
+
+Now, equate the expressions for \( t_1 \) from both equations:
+\begin{align}
+    \frac{x_2 - x_1 + t_2 \cdot dx_2}{dx_1} &= \frac{y_2 - y_1 + t_2 \cdot dy_2}{dy_1} \\
+    (x_2 - x_1 + t_2 \cdot dx_2) \cdot dy_1 &= (y_2 - y_1 + t_2 \cdot dy_2) \cdot dx_1
+\end{align}
+
+Expanding and rearranging, we get:
+\begin{align}
+    x_2 \cdot dy_1 - x_1 \cdot dy_1 + t_2 \cdot dx_2 \cdot dy_1 &= y_2 \cdot dx_1 - y_1 \cdot dx_1 + t_2 \cdot dy_2 \cdot dx_1 \\
+    t_2 \cdot (dx_2 \cdot dy_1 - dy_2 \cdot dx_1) &= y_2 \cdot dx_1 - y_1 \cdot dx_1 - x_2 \cdot dy_1 + x_1 \cdot dy_1
+\end{align}
+
+Solving for \( t_2 \):
+\begin{equation}
+    t_2 = \frac{y_2 \cdot dx_1 - y_1 \cdot dx_1 - x_2 \cdot dy_1 + x_1 \cdot dy_1}{dx_2 \cdot dy_1 - dy_2 \cdot dx_1}
+\end{equation}
+
+Substitute \( t_2 \) into one of the original equations to find \( t_1 \):
+\begin{equation}
+    t_1 = \frac{x_2 \cdot dy_2 - x_1 \cdot dy_2 - y_2 \cdot dx_2 + y_1 \cdot dx_2}{dx_1 \cdot dy_2 - dy_1 \cdot dx_2}
+\end{equation}
+
+Thus, the solutions for \( t_1 \) and \( t_2 \) are:
+\begin{align}
+    t_1 &= \frac{x_2 \cdot dy_2 - x_1 \cdot dy_2 - y_2 \cdot dx_2 + y_1 \cdot dx_2}{dx_1 \cdot dy_2 - dy_1 \cdot dx_2} \\
+    t_2 &= \frac{y_2 \cdot dx_1 - y_1 \cdot dx_1 - x_2 \cdot dy_1 + x_1 \cdot dy_1}{dx_2 \cdot dy_1 - dy_2 \cdot dx_1}
+\end{align}
+
+\end{document}
